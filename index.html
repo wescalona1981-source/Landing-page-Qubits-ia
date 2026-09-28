@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qubits IA - Soluciones de Inteligencia Artificial</title>
+    <!-- Fuentes externas: Orbitron para títulos tech y Roboto para texto -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="header">
+    <a href="#inicio" class="logo">
+        <img src="img/logo.png" alt="Logo de Qubits IA" class="logo__img">
+    </a>
+    <nav class="nav">
+        <ul class="nav__list" id="nav-list">
+            <li><a href="#inicio" class="nav__link">Inicio</a></li>
+            <li><a href="#soluciones" class="nav__link">Soluciones</a></li>
+            <li><a href="#demo" class="nav__link">Demostración</a></li>
+            <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <!-- Sección Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Impulsa tu Empresa con <span class="text-gradient">Qubits IA</span></h1>
+                <p class="hero__description">Transformamos negocios mediante modelos predictivos, agentes conversacionales y automatización inteligente.</p>
+                <div class="hero__buttons">
+                    <a href="https://qubits-ia.com/" class="btn btn--primary">Conocenos</a>
+                    <a href="#demo" class="btn btn--secondary"><i class="fas fa-play"></i> Ver Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Soluciones / Servicios -->
+        <section id="soluciones" class="soluciones">
+            <h2 class="section-title">Nuestras Soluciones</h2>
+            <!-- [PUNTO DE CONEXIÓN JS]: Aquí puedes agregar filtros interactivos por categoría de IA -->
+            <div class="cards-container">
+                <article class="card">
+                    <i class="fas fa-robot card__icon"></i>
+                    <h3 class="card__title">Agentes Autónomos</h3>
+                    <p class="card__text">Chatbots y asistentes virtuales capaces de resolver tareas complejas de atención al cliente 24/7.</p>
+                </article>
+
+                <article class="card">
+                    <i class="fas fa-chart-line card__icon"></i>
+                    <h3 class="card__title">Modelos Predictivos</h3>
+                    <p class="card__text">Análisis de datos avanzado para anticipar tendencias de mercado y comportamiento de usuarios.</p>
+                </article>
+
+                <article class="card">
+                    <i class="fas fa-cogs card__icon"></i>
+                    <h3 class="card__title">Automatización RPA</h3>
+                    <p class="card__text">Optimizamos flujos de trabajo repetitivos integrando modelos generativos de IA.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección de Video / Demo -->
+        <section id="demo" class="demo">
+    <h2 class="section-title">IA en Acción</h2>
+    
+    <!-- Contenedor principal externo -->
+    <div class="video-container">
+        
+        <!-- Contenedor secundario interno -->
+        <div class="video-contenedor">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/WB2krfSGwSc" 
+                title="Demostración del producto" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div> <!-- Aquí cierra el div "video-contenedor" -->
+        
+    </div> <!-- [SOLUCIÓN] Añadimos este </div> para cerrar el div "video-container" -->
+    
+</section>
+        <!-- Sección de Contacto y Redes Sociales -->
+        <section id="contacto" class="contacto">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="contacto__wrapper">
+
+                <!-- Formulario de Contacto -->
+                <form action="https://script.google.com/macros/s/AKfycbzU7zIiX18NJNSUD8vUdVX36tWlfV1a5VitVdLx-2OaIGiYFNLZJSpt1bBSYGZCB24WTg/exec" method="POST" class="form" id="contact-form">
+                    <div class="form__group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <!-- [NUEVA CAPA DE SEGURIDAD]: Trampa Honeypot contra Bots -->
+                        <!-- Este contenedor está oculto para los humanos gracias a 'display: none' -->
+                    <div style="display: none;" aria-hidden="true">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos" tabindex="-1" autocomplete="off">
+                    </div>
+                    <div class="form__group">
+                    <label for="mensaje">¿Cómo podemos ayudarte?</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos tu proyecto..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Enviar Mensaje</button>
+                    <!-- [PUNTO DE CONEXIÓN JS]: Mensaje de confirmación dinámico al enviar -->
+                    <p id="form-status" class="form__status"></p>
+                </form>
+
+                <!-- Canales Directos y Redes Sociales -->
+                <div class="contacto__info">
+                    <h3>¿Si quieres una atención personalizada?</h3>
+                    <p>Contactanos</p>
+
+                    <div class="contacto__country">
+                        <a href="https://wa.me/5491132234455" target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Chat en WhatsApp
+                        </a>
+                        <img src="https://flagcdn.com/w80/ar.png" alt="Bandera de Argentina" class="bandera-circular">
+                    </div>
+
+                    <div class="contacto__country">
+                        <a href="https://wa.me/584243756598" target="_blank" class="btn-whatsapp btn-whatsapp--secondary">
+                            <i class="fab fa-whatsapp"></i> Chat en WhatsApp
+                        </a>
+                        <img src="https://flagcdn.com/w80/ve.png" alt="Bandera de Venezuela" class="bandera-circular">
+                    </div>
+                    
+                    <div class="conocer"> 
+                        <h3> Conoce mas de nosotros en nuestras redes sociales</h3> </div>
+
+                    <div class="social-menu">
+                        <ul>
+                            <!-- Cada <li> es un ítem de la lista. Las clases 'facebook', 'twitter', etc., nos servirán en CSS -->
+                            <li><a href="https://facebook.com/QubitsIA" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/tuusuario" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://instagram.com/qubits_ia" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://tiktok.com/@qubits_ia" class="tiktok"><i class="fab fa-tiktok"></i></a></li>
+                            <!-- <li><a href="https://youtube.com/tuusuario" class="youtube"><i class="fab fa-youtube"></i></a></li>-->
+                            <!-- <li><a href="https://linkedin.com/in/tuusuario" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li> --> <!-- cuando quiera agregar linkedin -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Qubits IA. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Vinculación de JavaScript al final del body para no retrasar la carga del HTML -->
+    <script src="script.js"></script>
+</body>
+</html>

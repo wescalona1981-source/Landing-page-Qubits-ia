@@ -1,0 +1,369 @@
+/* Reseteo básico y variables globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --accent-cyan: #00f2fe;
+    --accent-purple: #7928ca;
+    --text-color: #f0f6fc;
+    --text-muted: #8b949e;
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* Encabezado con Flexbox */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: rgba(37, 89, 163, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #21262d;
+}
+
+.logo__img {
+    height: 150px; /* Define la altura adecuada para la barra de navegación */
+    width: auto;  /* Mantiene la proporción original de la imagen */
+    display: block;
+}
+.logo {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo__icon {
+    color: var(--accent-cyan);
+}
+
+.logo__highlight {
+    color: var(--accent-cyan);
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav__link {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: var(--accent-cyan);
+}
+
+/* Hero Section */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(circle at center, #1f293d 0%, var(--bg-color) 70%);
+}
+
+.hero__title {
+    font-family: var(--font-title);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-gradient {
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero__description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: var(--text-muted);
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.btn--primary {
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    color: #fff;
+    border: none;
+}
+
+.btn--secondary {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid var(--accent-cyan);
+    margin-left: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+/* Tarjetas de Soluciones */
+.soluciones, .demo, .contacto {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.card:hover {
+    border-color: var(--accent-cyan);
+}
+
+.card__icon {
+    font-size: 2.5rem;
+    color: var(--accent-cyan);
+    margin-bottom: 1rem;
+}
+
+.card__title {
+    margin-bottom: 0.8rem;
+}
+
+.card__text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Contenedor de Video */
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulario y Contacto */
+.contacto__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.form {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form__group {
+    margin-bottom: 1.2rem;
+}
+
+.form__group label {
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+
+.form__group input, .form__group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    color: var(--text-color);
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.32);
+}
+
+.contacto__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contacto__country {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.bandera-circular {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+
+}
+
+.contacto__info h3,
+.contacto__info p,
+.contacto__info .btn-whatsapp,
+.contacto__info .social-menu {
+    margin: 2;
+}
+
+.social-menu {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.social-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* 4. Separación: Damos un margen a los lados para separar cada ícono */
+.social-menu ul li {
+    margin: 1;
+}
+
+/* 5. Diseño del botón circular */
+.social-menu ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%; /* Esto convierte el cuadrado en un círculo */
+    text-decoration: none; /* Quita la línea de los enlaces */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Crea una sombra suave y moderna */
+    
+    /* Esta es la clave de la animación: cualquier cambio tomará 0.3 segundos de forma suave */
+    transition: all 0.3s ease; 
+}
+
+/* 6. Diseño del gráfico del ícono (la letra 'i') */
+.social-menu ul li a i {
+    font-size: 30px;
+    color: #4d4d4d; /* Color gris oscuro por defecto */
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+7. EFECTOS HOVER (Cuando pasas el ratón)
+   ========================================= */
+
+/* Hacemos que el botón flote hacia arriba 10 píxeles */
+.social-menu ul li a:hover {
+    transform: translateY(-10px);
+}
+
+/* Hacemos que el ícono se vuelva blanco para contrastar con el fondo */
+.social-menu ul li a:hover i {
+    color: #ffffff;
+}
+
+/* Aplicamos el color de marca oficial al fondo del botón cuando se hace hover */
+.social-menu ul li a.facebook:hover {
+    background-color: #1877f2;
+    box-shadow: 0 10px 15px rgba(24, 119, 242, 0.4); /* Sombra del mismo color */
+}
+
+.social-menu ul li a.twitter:hover {
+    background-color: #1da1f2;
+    box-shadow: 0 10px 15px rgba(29, 161, 242, 0.4);
+}
+
+/* Instagram tiene un degradado especial */
+.social-menu ul li a.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 10px 15px rgba(220, 39, 67, 0.4);
+}
+
+.social-menu ul li a.tiktok:hover {
+    background-color: #0c0b0b;
+    box-shadow: 0 10px 15px rgba(10, 9, 9, 0.4);
+}
+/* .social-menu ul li a.youtube:hover {
+    background-color: #ff0000;
+    box-shadow: 0 10px 15px rgba(255, 0, 0, 0.4);
+}
+
+/*.social-menu ul li a.linkedin:hover {
+    background-color: #0a66c2;
+    box-shadow: 0 10px 15px rgba(10, 102, 194, 0.4);
+}*/
